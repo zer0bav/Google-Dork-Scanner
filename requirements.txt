@@ -4,3 +4,5 @@ rich
 brotli
 stem
 PySocks
+setuptools 
+wheel

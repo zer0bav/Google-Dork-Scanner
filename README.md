@@ -27,7 +27,7 @@ Google Dork Scanner (GDS) is a tool designed for ethical use, allowing you to se
 * Required Python packages:
 
 ```bash
-pip install aiohttp beautifulsoup4 rich brotli
+pip install aiohttp beautifulsoup4 rich brotli setuptools wheel  
 ```
 
 * Optional (for Google CSE):
@@ -54,6 +54,13 @@ pip install -r requirements.txt
 
 3. Customize `dorks.json` or use the provided examples.
 
+4. setup tool with `pyproject.toml`
+
+```bash
+pip install .
+```
+
+
 ---
 
 ## Usage
@@ -63,6 +70,12 @@ pip install -r requirements.txt
 ```bash
 python gds.py -c files -t example.com -n 10 --snapshot
 ```
+or
+
+```bash
+gdscanner -c files -t example.com -n 10 --snapshot
+```
+
 
 Parameters:
 

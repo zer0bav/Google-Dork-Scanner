@@ -1,0 +1,22 @@
+[project]
+name = "gds"
+version = "1.0.0"
+description = "A powerful tool for scanning Google Dorks."
+authors = [
+    { name = "zer0bav"}
+]
+requires-python = ">=3.9"
+dependencies = [
+    "aiohttp",
+    "beautifulsoup4",
+    "rich",
+    "brotli",
+    "stem",
+    "PySocks"
+]
+
+[project.scripts]
+gdscanner = "gds.gds:main"
+
+[tool.setuptools]
+packages = ["gds"]
