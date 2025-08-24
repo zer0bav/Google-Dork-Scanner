@@ -128,14 +128,14 @@ The analysis script:
 
 #### gds.py
 
-![alt text](example.png)
+![alt text](statics/example.png)
 
 #### analyze.py
-![alt text](image.png)
+![alt text](statics/image.png)
 
 #### tor-configure.py
 
-![alt text](image-1.png)
+![alt text](statics/image-1.png)
 ---
 
 ## License

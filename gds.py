@@ -399,7 +399,7 @@ def print_banner():
 ██║██║╚██╗██║   ██║   ██╔══██╗██║   ██║██║   ██║██╔══╝  ██╔══██╗   ██║   
 ██║██║ ╚████║   ██║   ██    ██╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
 ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝  ╚══════╝╚═╝  ╚═╝   ╚═╝   
-""", style="bold magenta")
+""", style="bold dark_magenta")
     console.print(banner)
     console.print(Panel.fit(" [cyan]google dork scanner[/cyan] - created by [bold red]zer0bav[/bold red] ", border_style="bright_blue"))
     console.print(Text("author: zer0bav", style="dim white"))
