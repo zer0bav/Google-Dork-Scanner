@@ -1,0 +1,248 @@
+{
+  "files_and_documents": {
+    "description": "general file types and documents.",
+    "risk": "low",
+    "dorks": [
+      "filetype:pdf",
+      "filetype:doc",
+      "filetype:docx",
+      "filetype:xls",
+      "filetype:xlsx",
+      "filetype:ppt",
+      "filetype:pptx",
+      "filetype:txt",
+      "filetype:csv",
+      "filetype:log"
+    ]
+  },
+  "backups_and_archives": {
+    "description": "backup files and archives.",
+    "risk": "medium",
+    "dorks": [
+      "filetype:bak",
+      "filetype:sql",
+      "filetype:zip",
+      "filetype:tar",
+      "filetype:gz",
+      "filetype:rar",
+      "filetype:backup",
+      "\"backup.sql\"",
+      "\"dump.sql\"",
+      "\"db_backup\""
+    ]
+  },
+  "indexing_and_directory_listing": {
+    "description": "open directories, indexing, and parent directory listings.",
+    "risk": "low",
+    "dorks": [
+        "Index of /",
+        "Parent Directory",
+        "index of admin",
+        "index of backup",
+        "index of db",
+        "index of .git/",
+        "index of .svn/",
+        "index of .hg/",
+        "index of .idea",
+        "index of .vscode"
+    ]
+      },
+  "login_and_admin_panels": {
+    "description": "login and admin panels, cms logins.",
+    "risk": "medium",
+    "dorks": [
+      "inurl:login",
+      "inurl:admin",
+      "inurl:wp-login.php",
+      "inurl:wp-admin",
+      "inurl:administrator",
+      "inurl:manager/html",
+      "intitle:login",
+      "intitle:admin",
+      "intitle:dashboard",
+      "inurl:/admin/login",
+      "inurl:/user/login"
+    ]
+  },
+  "cms_and_platforms": {
+    "description": "popular cms and platform directories.",
+    "risk": "low",
+    "dorks": [
+      "inurl:wp-content",
+      "inurl:wp-includes",
+      "inurl:administrator/index.php",
+      "intitle:\"joomla\" \"administrator\"",
+      "inurl:/sites/default/files",
+      "inurl:magento",
+      "inurl:shopify",
+      "inurl:moodle",
+      "inurl:laravel",
+      "inurl:django"
+    ]
+  },
+  "vcs_and_source_repos": {
+    "description": "version control systems and open source code directories.",
+    "risk": "medium",
+    "dorks": [
+      "\"/.git/config\"",
+      "\"/.svn/\"",
+      "\"/.hg/\"",
+      "filetype:gitconfig",
+      "filetype:patch",
+      "filetype:diff",
+      "filetype:composer.json",
+      "filetype:package.json"
+    ]
+  },
+  "error_and_debug": {
+    "description": "error messages and debug outputs.",
+    "risk": "medium",
+    "dorks": [
+      "\"php parse error\"",
+      "\"warning: mysql_connect\"",
+      "\"stack trace:\" \"exception\"",
+      "\"java.lang.nullpointerexception\"",
+      "\"traceback (most recent call last)\"",
+      "\"fatal error\"",
+      "\"exception in thread\""
+    ]
+  },
+  "iot_and_devices": {
+    "description": "iot devices, dvr, camera, printer and web interfaces.",
+    "risk": "high",
+    "sensitive": true,
+    "dorks": [
+      "intitle:\"live view / - axis\"",
+      "inurl:view.shtml",
+      "intitle:\"webcamxp\"",
+      "intitle:\"ip camera\" \"viewer\"",
+      "inurl:8080 \"camera\"",
+      "inurl:/config",
+      "intitle:\"printer\" \"hp\" \"web\"",
+      "inurl:/pws?",
+      "inurl:printers/view"
+    ]
+  },
+  "cloud_and_storage": {
+    "description": "cloud storage and bucket misconfigurations.",
+    "risk": "medium",
+    "dorks": [
+      "site:s3.amazonaws.com \"index of\"",
+      "site:storage.googleapis.com \"index of\"",
+      "site:blob.core.windows.net \"index of\"",
+      "site:amazonaws.com \"acl\"",
+      "\"bucket\" \"index of\" filetype:txt"
+    ]
+  },
+  "databases_and_sql": {
+    "description": "database dumps and sql files, sensitive.",
+    "risk": "high",
+    "sensitive": true,
+    "dorks": [
+      "filetype:sql \"insert into\"",
+      "filetype:sql \"create table\"",
+      "\"dump.sql\"",
+      "\"database.sql\"",
+      "\"backup.sql\"",
+      "\"adminer.php\"",
+      "inurl:phpmyadmin"
+    ]
+  },
+  "credentials_and_secrets": {
+    "description": "sensitive data: api keys, secrets, env, private keys",
+    "risk": "critical",
+    "sensitive": true,
+    "dorks": [
+      "filetype:env \"db_password\"",
+      "intext:\"aws_access_key_id\"",
+      "intext:\"aws_secret_access_key\"",
+      "intext:\"private key\" filetype:txt",
+      "intext:\"-----begin private key-----\"",
+      "filetype:json \"token\"",
+      "filetype:yaml \"secret\""
+    ]
+  },
+  "apis_and_tokens": {
+    "description": "api keys, tokens and authorization headers.",
+    "risk": "high",
+    "sensitive": true,
+    "dorks": [
+      "intext:\"api_key\"",
+      "intext:\"api_key=\"",
+      "intext:\"access_token\"",
+      "intext:\"authorization: bearer\"",
+      "intext:\"webhook\"",
+      "intext:\"jwt\""
+    ]
+  },
+  "ci_cd_and_build": {
+    "description": "ci/cd pipeline files, build artifacts and jenkins/gitlab/travis configs.",
+    "risk": "medium",
+    "dorks": [
+      "\"jenkins\" \"manage jenkins\"",
+      "inurl:.gitlab-ci.yml",
+      "inurl:travis.yml \"deploy\"",
+      "filetype:zip \"artifact\"",
+      "filetype:tar \"build\""
+    ]
+  },
+  "gov_and_edu": {
+    "description": "public and educational institution files and reports.",
+    "risk": "medium",
+    "dorks": [
+      "site:.gov filetype:pdf",
+      "site:.gov filetype:doc",
+      "site:.edu filetype:ppt",
+      "site:.edu syllabus",
+      "site:.edu filetype:docx"
+    ]
+  },
+  "finance_and_banking": {
+    "description": "banking and financial documents, sensitive files.",
+    "risk": "high",
+    "sensitive": true,
+    "dorks": [
+      "filetype:xls salary",
+      "filetype:csv account",
+      "site:bank.* \"login\"",
+      "filetype:pdf financial report"
+    ]
+  },
+  "medical_and_healthcare": {
+    "description": "medical devices, health records, sensitive files",
+    "risk": "high",
+    "sensitive": true,
+    "dorks": [
+      "intitle:\"pacs\" \"login\"",
+      "intitle:\"medical record\"",
+      "site:.hospital filetype:pdf",
+      "filetype:xls \"patient\""
+    ]
+  },
+  "server_fingerprinting": {
+    "description": "server software and version info, banners and fingerprinting",
+    "risk": "low",
+    "dorks": [
+      "intitle:\"welcome to nginx\"",
+      "\"apache/2.4\"",
+      "\"iis/\" \"server\"",
+      "\"tomcat/\"",
+      "inurl:phpinfo.php",
+      "inurl:robots.txt",
+      "inurl:.well-known/security.txt"
+    ]
+  },
+  "miscellaneous": {
+    "description": "other miscellaneous dorks and test searches.",
+    "risk": "low",
+    "dorks": [
+      "ext:swf",
+      "ext:bak",
+      "ext:old",
+      "ext:log",
+      "ext:tmp",
+      "ext:cfg",
+      "inurl:.gitignore"
+    ]
+  }
+}

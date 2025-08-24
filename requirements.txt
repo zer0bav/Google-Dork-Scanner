@@ -1,0 +1,6 @@
+aiohttp
+beautifulsoup4
+rich
+brotli
+stem
+PySocks
